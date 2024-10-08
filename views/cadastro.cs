@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using projetoAgenda.data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -34,7 +36,18 @@ namespace projetoAgenda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            habilitarbotãodecadastro();
+            conexaoDB conect = new conexaoDB();
+            MySqlConnection conexao = new 
+
+            // //
+            conexao.Open();
+            // // 
+            string sql = "insert into tbusuarios (NOME,USUARIO,telefone,senha) values({txt.nome.txt},{txtUsuario.txt})";
+            MySqlCommand comando = new MySqlCommand(sql, conexao);  
+            comando.ExecuteNonQuery();  
+            //fechando//
+            conexao.Close();
+            MessageBox.Show("cadastro feito  com successo /faça o login ");
 
         }
 
@@ -50,7 +63,7 @@ namespace projetoAgenda
 
         private void campo_repita_TextChanged(object sender, EventArgs e)
         {
-
+            habilitarbotãodecadastro();
         }
     }
 }
