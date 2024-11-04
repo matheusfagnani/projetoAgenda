@@ -9,9 +9,9 @@ namespace projetoAgenda.data
 {
     internal class conexaoDB
     {
-        public MySqlConnection criarConexao()
+        static public MySqlConnection CriarConexao()
         {
-            string stringConexao = "server=127.0.0.1;Database=bdagenda;user ID=root;password=rooot";
+            string stringConexao = "server=127.0.0.1;Database= db_agenda ;user ID=root;password=root";
             //conexão//
             MySqlConnection conexao = new MySqlConnection(stringConexao);
             return conexao;

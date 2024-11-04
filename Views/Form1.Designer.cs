@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txt_usuario = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txt_senha = new TextBox();
             btn_logar = new Button();
             cadastrar = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txt_usuario
             // 
-            textBox1.Location = new Point(157, 111);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(250, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_usuario.Location = new Point(157, 111);
+            txt_usuario.Name = "txt_usuario";
+            txt_usuario.Size = new Size(250, 23);
+            txt_usuario.TabIndex = 0;
+            txt_usuario.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -66,13 +66,13 @@
             label2.TabIndex = 2;
             label2.Text = "senha ";
             // 
-            // textBox2
+            // txt_senha
             // 
-            textBox2.Location = new Point(157, 177);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(268, 23);
-            textBox2.TabIndex = 3;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txt_senha.Location = new Point(157, 177);
+            txt_senha.Name = "txt_senha";
+            txt_senha.Size = new Size(268, 23);
+            txt_senha.TabIndex = 3;
+            txt_senha.TextChanged += textBox2_TextChanged;
             // 
             // btn_logar
             // 
@@ -83,6 +83,7 @@
             btn_logar.TabIndex = 4;
             btn_logar.Text = "entrar";
             btn_logar.UseVisualStyleBackColor = true;
+            btn_logar.Click += btn_logar_Click;
             // 
             // cadastrar
             // 
@@ -103,10 +104,10 @@
             ClientSize = new Size(800, 450);
             Controls.Add(cadastrar);
             Controls.Add(btn_logar);
-            Controls.Add(textBox2);
+            Controls.Add(txt_senha);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txt_usuario);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -115,10 +116,10 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txt_usuario;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txt_senha;
         private Button btn_logar;
         private Button cadastrar;
     }
