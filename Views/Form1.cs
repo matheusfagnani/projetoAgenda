@@ -1,3 +1,4 @@
+using projetoAgenda.Views;
 using ProjetoAgenda.Controller;
 
 namespace projetoAgenda
@@ -42,7 +43,12 @@ namespace projetoAgenda
         {
             UsuarioController usuarioController = new UsuarioController();
             bool resultado = usuarioController.LogarUsuario(txt_usuario.Text, txt_senha.Text);
-            MessageBox.Show(resultado.ToString());
+           
+
+            this.Hide();
+            
+            Frm_tela_principal frm_Tela_Principal = new Frm_tela_principal();
+            frm_Tela_Principal.ShowDialog();
         }
     }
 }

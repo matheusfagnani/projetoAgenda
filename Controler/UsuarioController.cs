@@ -66,7 +66,7 @@ namespace ProjetoAgenda.Controller
                 MySqlConnection conexao = conexaoDB.CriarConexao();
                 string sql = @"select * from tb_usuarios
                             where usuario = @usuario
-                        and Binary senha = =@senha ;";
+                        and Binary senha = @senha ;";
 
                 conexao.Open();
 

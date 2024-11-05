@@ -21,8 +21,8 @@ namespace projetoAgenda.Controler
         private void button1_Click(object sender, EventArgs e)
         {
            UsuarioController usuarioController = new UsuarioController();
-            bool resultado = usuarioController.LogarUsuario("godo", "AlexLindao");
-            MessageBox.Show(resultado.ToString());
+            bool resultado = usuarioController.LogarUsuario("godo", "AlexLindão");
+            
             
         }
     }
