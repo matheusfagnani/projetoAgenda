@@ -16,5 +16,17 @@ namespace projetoAgenda.Views
         {
             InitializeComponent();
         }
-       }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_categorias frm_Categorias = new Frm_categorias();
+            frm_Categorias.ShowDialog();    
+            this.Hide();
+        }
+    }
 }

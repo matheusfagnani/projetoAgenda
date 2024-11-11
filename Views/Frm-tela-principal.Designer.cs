@@ -66,6 +66,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "&Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // editarToolStripMenuItem
             // 
@@ -86,6 +87,7 @@
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             categoriasToolStripMenuItem.Size = new Size(180, 22);
             categoriasToolStripMenuItem.Text = "Categorias";
+            categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
             // Frm_tela_principal
             // 
