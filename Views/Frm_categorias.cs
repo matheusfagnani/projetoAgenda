@@ -36,12 +36,23 @@ namespace projetoAgenda.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            categoriaController controleCategoria  = new categoriaController();
+            categoriaController controleCategoria = new categoriaController();
+            DataTable tabela = controleCategoria.GetCategoria();
+            dgvCategorias.DataSource = tabela;
 
-          
-         DataTable tabela = controleCategoria.GetCategoria();
-            dgvCategorias.DataSource = tabela; 
-            
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int cod = Convert.ToInt32(dgvCategorias.SelectedRows[0].Cells[0].Value);
+
+            categoriaController categoriaController = new categoriaController();
+            categoriaController.excluir_categoria(cod);
+
+            categoriaController controleCategoria = new categoriaController();
+            DataTable tabela = controleCategoria.GetCategoria();
+            dgvCategorias.DataSource = tabela;
 
         }
     }

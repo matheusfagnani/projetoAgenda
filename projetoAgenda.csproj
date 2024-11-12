@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="categoria\**" />
+    <EmbeddedResource Remove="categoria\**" />
+    <None Remove="categoria\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.0.0" />
   </ItemGroup>
 
@@ -25,10 +31,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="categoria\" />
   </ItemGroup>
 
 </Project>

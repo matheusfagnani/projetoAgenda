@@ -10,7 +10,40 @@ using System.Threading.Tasks;
 namespace projetoAgenda.Controler
 {
     internal class categoriaController
+
     {
+
+        public bool excluir_categoria(int cod)
+        {
+            try
+            {
+                MySqlConnection conexao = conexaoDB.CriarConexao();
+                string sql = "DELETE FROM tb_categorias where cod = @cod ;";
+                conexao.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                comando.Parameters.AddWithValue("@cod", cod);
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhasAfetadas > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"erro ao efetuar o cadastro :{erro.Message}");
+
+                return false;
+            }
+
+
+        }  
         public bool AddCategoria(string categoria)
         {
             try
@@ -19,7 +52,7 @@ namespace projetoAgenda.Controler
                 MySqlConnection conexao = conexaoDB.CriarConexao();
 
                 //Comando SQL que será executado
-                string sql = "INSERT INTO tb_categorias (categoria) VALUES (@categoria);";
+                string sql = "INSERT INTO tb_categorias (nome_categoria) VALUES (@nome_categoria);";
 
                 //Abri a conexão com o banco
                 conexao.Open();
@@ -29,7 +62,7 @@ namespace projetoAgenda.Controler
 
                 //Estou trocanco o valor dos @ pelas informações que serão cadastradas
                 //Essas informações vieram dos parametros da função
-                comando.Parameters.AddWithValue("@categoria", categoria);
+                comando.Parameters.AddWithValue("@nome_categoria", categoria);
 
 
                 //Executando no banco de dados
@@ -66,7 +99,7 @@ namespace projetoAgenda.Controler
                 conexao = conexaoDB.CriarConexao();
 
                 // select que vai retornar 
-                string sql = @"Select cod AS 'codigo', categoria AS 'categoria' from tb_categorias;";
+                string sql = @"Select cod AS 'codigo', nome_categoria AS 'categoria' from tb_categorias;";
 
                 //abri a conexao
                 conexao.Open();
