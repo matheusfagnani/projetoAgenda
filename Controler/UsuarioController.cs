@@ -13,6 +13,7 @@ namespace ProjetoAgenda.Controller
     internal class UsuarioController
     {
         public bool AddUsuario(string nome, string usuario, string telefone, string senha)
+
         {
             try
             {
@@ -20,7 +21,13 @@ namespace ProjetoAgenda.Controller
                 MySqlConnection conexao = conexaoDB.CriarConexao();
 
                 //Comando SQL que será executado
-                string sql = "INSERT INTO tbUsuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);";
+                string sql = "INSERT INTO tb_usuarios(nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);" +
+                    $"CREATE USER '(user_1)'@'%' IDENTIFIED BY '@senha';" +
+                    $"GRANT privilégios ON  db_agenda.* TO 'user_1'@'%';";
+                    
+                
+                
+
 
                 //Abri a conexão com o banco
                 conexao.Open();
