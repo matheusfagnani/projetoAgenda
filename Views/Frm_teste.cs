@@ -1,4 +1,5 @@
-﻿using ProjetoAgenda.Controller;
+﻿using projetoAgenda.variableGlobal;
+using ProjetoAgenda.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,20 @@ namespace projetoAgenda.Controler
 
         private void button1_Click(object sender, EventArgs e)
         {
-           UsuarioController usuarioController = new UsuarioController();
+            UsuarioController usuarioController = new UsuarioController();
             bool resultado = usuarioController.LogarUsuario("godo", "AlexLindão");
-            
-            
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            User_session._usuario = textBox1.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(User_session._usuario);
         }
     }
 }

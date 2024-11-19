@@ -29,31 +29,55 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            button2 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(189, 118);
+            button1.Location = new Point(82, 203);
             button1.Name = "button1";
-            button1.Size = new Size(358, 175);
+            button1.Size = new Size(246, 72);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(387, 203);
+            button2.Name = "button2";
+            button2.Size = new Size(246, 72);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(148, 104);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(340, 23);
+            textBox1.TabIndex = 2;
             // 
             // Frm_teste
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
+            Controls.Add(button2);
             Controls.Add(button1);
             Name = "Frm_teste";
             Text = "Frm_teste";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
+        private Button button2;
+        private TextBox textBox1;
     }
 }
