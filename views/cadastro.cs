@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using projetoAgenda.data;
+using ProjetoAgenda.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -34,8 +37,19 @@ namespace projetoAgenda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            habilitarbotãodecadastro();
+            string nome =campo_nome.Text;
+            string usuario = campo_usuario.Text;
+            string telefone = campo_telefone.Text;
+            string senha = campo_senha.Text;
+            
+            UsuarioController controleUsuario = new UsuarioController();
+           bool resultado = controleUsuario.AddUsuario(nome, usuario, telefone, senha);
 
+
+            if (resultado)
+            {
+                MessageBox.Show("cadastro feito  com successo /faça o login ");
+            }
         }
 
         private void campo_usuario_TextChanged(object sender, EventArgs e)
@@ -50,7 +64,7 @@ namespace projetoAgenda
 
         private void campo_repita_TextChanged(object sender, EventArgs e)
         {
-
+            habilitarbotãodecadastro();
         }
     }
 }
