@@ -36,5 +36,19 @@ namespace projetoAgenda.Controler
         {
             MessageBox.Show(User_session._usuario);
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            User_session._nome = textBox1.Text;
+            User_session._usuario = textBox2.Text;
+            User_session._senha = textBox3.Text;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(User_session._nome);
+            MessageBox.Show(User_session._usuario);
+            MessageBox.Show(User_session._senha );
+        }
     }
 }
