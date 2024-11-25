@@ -44,7 +44,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(6, 22);
+            txtCategoria.Location = new Point(6, 27);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(226, 23);
             txtCategoria.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             button2.BackColor = SystemColors.ButtonFace;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(9, 74);
+            button2.Location = new Point(19, 100);
             button2.Name = "button2";
             button2.Size = new Size(169, 36);
             button2.TabIndex = 1;
@@ -73,7 +73,7 @@
             // button1
             // 
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(364, 14);
+            button1.Location = new Point(487, 162);
             button1.Name = "button1";
             button1.Size = new Size(169, 36);
             button1.TabIndex = 3;
@@ -93,7 +93,7 @@
             groupBox1.ForeColor = SystemColors.ButtonFace;
             groupBox1.Location = new Point(2, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(889, 310);
+            groupBox1.Size = new Size(1222, 310);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "categoria";
@@ -101,7 +101,7 @@
             // btn_excluir
             // 
             btn_excluir.ForeColor = SystemColors.ActiveCaptionText;
-            btn_excluir.Location = new Point(341, 162);
+            btn_excluir.Location = new Point(291, 162);
             btn_excluir.Name = "btn_excluir";
             btn_excluir.Size = new Size(169, 36);
             btn_excluir.TabIndex = 4;

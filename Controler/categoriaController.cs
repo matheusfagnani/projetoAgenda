@@ -43,7 +43,7 @@ namespace projetoAgenda.Controler
             }
 
 
-        }  
+        }
         public bool AddCategoria(string categoria)
         {
             try
@@ -118,7 +118,7 @@ namespace projetoAgenda.Controler
             catch (Exception erro)
             {
                 MessageBox.Show($"erro ao recuperar a categoria: {erro.Message} ");
-                
+
                 return new DataTable();
             }
             finally
@@ -126,12 +126,35 @@ namespace projetoAgenda.Controler
 
                 conexao.Close();
             }
+        }
+        public bool alterar_categoria(int cod, string categoria)
+        {
+            try
+            {
+                MySqlConnection conexao = conexaoDB.CriarConexao();
+                string sql = "";
+                // abri a conexao
+                conexao.Open();
+
+                //adapter 
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexao);
+
+                //tabela vazia 
+                DataTable tabela = new DataTable();
+
+              
+
+
+
+            }
 
 
 
         }
     }
 }
+
+
 
         
 
