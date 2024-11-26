@@ -36,6 +36,7 @@
             editarToolStripMenuItem = new ToolStripMenuItem();
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
+            lbl_bemVindo = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +59,13 @@
             // arquivoToolStripMenuItem1
             // 
             arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
-            arquivoToolStripMenuItem1.Size = new Size(180, 22);
+            arquivoToolStripMenuItem1.Size = new Size(116, 22);
             arquivoToolStripMenuItem1.Text = "&Arquivo";
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(116, 22);
             sairToolStripMenuItem.Text = "&Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -89,6 +90,18 @@
             categoriasToolStripMenuItem.Text = "Categorias";
             categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
+            // lbl_bemVindo
+            // 
+            lbl_bemVindo.AutoSize = true;
+            lbl_bemVindo.BackColor = Color.Transparent;
+            lbl_bemVindo.Font = new Font("Segoe UI", 20F);
+            lbl_bemVindo.Location = new Point(459, 72);
+            lbl_bemVindo.Name = "lbl_bemVindo";
+            lbl_bemVindo.Size = new Size(201, 37);
+            lbl_bemVindo.TabIndex = 1;
+            lbl_bemVindo.Text = "seja bem-víndo";
+            lbl_bemVindo.Click += label1_Click;
+            // 
             // Frm_tela_principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -96,10 +109,12 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbl_bemVindo);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Frm_tela_principal";
             Text = "Frm_tela_principal";
+            Load += Frm_tela_principal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -115,5 +130,6 @@
         private ToolStripMenuItem editarToolStripMenuItem;
         private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
+        private Label lbl_bemVindo;
     }
 }

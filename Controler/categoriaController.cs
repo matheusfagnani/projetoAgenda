@@ -128,19 +128,19 @@ namespace projetoAgenda.Controler
             }
         }
         public bool alterar_categoria(int cod, string categoria)
-        {
+       {
             try
             {
                 MySqlConnection conexao = conexaoDB.CriarConexao();
                 string sql = "";
-                // abri a conexao
+                 abri a conexao
                 conexao.Open();
 
-                //adapter 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexao);
-
+               adapter 
+              //  MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexao);
+        //
                 //tabela vazia 
-                DataTable tabela = new DataTable();
+               // DataTable tabela = new DataTable();
 
               
 

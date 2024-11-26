@@ -110,4 +110,4 @@ create trigger trlogCategoria
 
      update tb_categoria
 	set nome_categoria = "fornecedoreas" 
-    where 
+    where  

@@ -12,8 +12,7 @@ namespace projetoAgenda.variableGlobal
         public static string _nome = null;
         public static string _usuario = null;
          public static string _senha = null;
-
-
+        internal static string usuario;
 
         public string nome
         {

@@ -1,4 +1,6 @@
 using projetoAgenda.Controler;
+using projetoAgenda.Views;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace projetoAgenda
 {
@@ -14,7 +16,9 @@ namespace projetoAgenda
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Frm_teste());
+            //
             Application.Run(new Form1());
+            //Application.Run(new Frm_tela_principal());
         }
     }
 }
