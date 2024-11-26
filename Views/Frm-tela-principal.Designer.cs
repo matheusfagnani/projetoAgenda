@@ -37,12 +37,13 @@
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
             lbl_bemVindo = new Label();
+            agendaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem, agendaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -86,7 +87,7 @@
             // categoriasToolStripMenuItem
             // 
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(180, 22);
+            categoriasToolStripMenuItem.Size = new Size(130, 22);
             categoriasToolStripMenuItem.Text = "Categorias";
             categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
@@ -95,12 +96,19 @@
             lbl_bemVindo.AutoSize = true;
             lbl_bemVindo.BackColor = Color.Transparent;
             lbl_bemVindo.Font = new Font("Segoe UI", 20F);
-            lbl_bemVindo.Location = new Point(459, 72);
+            lbl_bemVindo.Location = new Point(408, 44);
             lbl_bemVindo.Name = "lbl_bemVindo";
             lbl_bemVindo.Size = new Size(201, 37);
             lbl_bemVindo.TabIndex = 1;
             lbl_bemVindo.Text = "seja bem-víndo";
             lbl_bemVindo.Click += label1_Click;
+            // 
+            // agendaToolStripMenuItem
+            // 
+            agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
+            agendaToolStripMenuItem.Size = new Size(61, 20);
+            agendaToolStripMenuItem.Text = "agenda ";
+            agendaToolStripMenuItem.Click += agendaToolStripMenuItem_Click;
             // 
             // Frm_tela_principal
             // 
@@ -131,5 +139,6 @@
         private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
         private Label lbl_bemVindo;
+        private ToolStripMenuItem agendaToolStripMenuItem;
     }
 }
