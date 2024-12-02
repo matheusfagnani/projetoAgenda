@@ -1,6 +1,6 @@
 ﻿namespace projetoAgenda
 {
-    partial class Form1
+    partial class Frm_login
     {
         /// <summary>
         ///  Required designer variable.

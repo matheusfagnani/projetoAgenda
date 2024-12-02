@@ -18,7 +18,7 @@ namespace projetoAgenda.Controler
             try
             {
                 MySqlConnection conexao = conexaoDB.CriarConexao();
-                string sql = "DELETE FROM tb_categorias where cod = @cod ;";
+                string sql = "DELETE FROM tb_categoria where cod = @cod ;";
                 conexao.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 comando.Parameters.AddWithValue("@cod", cod);
@@ -52,7 +52,7 @@ namespace projetoAgenda.Controler
                 MySqlConnection conexao = conexaoDB.CriarConexao();
 
                 //Comando SQL que será executado
-                string sql = "INSERT INTO tb_categorias (nome_categoria) VALUES (@nome_categoria);";
+                string sql = "INSERT INTO tb_categoria (nome_categoria) VALUES (@nome_categoria);";
 
                 //Abri a conexão com o banco
                 conexao.Open();
@@ -99,7 +99,7 @@ namespace projetoAgenda.Controler
                 conexao = conexaoDB.CriarConexao();
 
                 // select que vai retornar 
-                string sql = @"Select cod AS 'codigo', nome_categoria AS 'categoria' from tb_categorias;";
+                string sql = @"Select cod AS 'codigo', nome_categoria AS 'categoria' from tb_categoria;";
 
                 //abri a conexao
                 conexao.Open();
@@ -127,36 +127,48 @@ namespace projetoAgenda.Controler
                 conexao.Close();
             }
         }
-        public bool alterar_categoria(int cod, string categoria)
-       {
+
+        public bool Alterar_Categoria(string nome_categoria)
+        {
             try
             {
                 MySqlConnection conexao = conexaoDB.CriarConexao();
-                string sql = "";
-                 abri a conexao
+                string sql = " UPDATE tb_categoria where nome_categoria= @nome_categoria ;";
                 conexao.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                comando.Parameters.AddWithValue("@nome_categoria", nome_categoria);
+                int linhasAfetadas = comando.ExecuteNonQuery();
 
-               adapter 
-              //  MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexao);
-        //
-                //tabela vazia 
-               // DataTable tabela = new DataTable();
+                conexao.Close();
 
-              
+                if (linhasAfetadas > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"erro ao Atualizar categoria :{erro.Message}");
 
-
-
+                return false;
             }
 
 
-
         }
+
     }
+
 }
 
 
 
-        
+
+
+
 
 
 

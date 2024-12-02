@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetoAgenda.Controler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,5 +27,30 @@ namespace projetoAgenda.Views
         {
 
         }
+
+        private void cadastrar_Click(object sender, EventArgs e)
+        {
+
+            ContatoController contato = new ContatoController();
+            bool resultado = contato.AddContato(campo_contato.Text, campo_numero.Text, Campo_categoria.Text);
+            if (resultado == true)
+            {
+                MessageBox.Show("cadastro concluido");
+
+            }
+            else
+            {
+                MessageBox.Show("erro ao cadastrar");
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
+
+

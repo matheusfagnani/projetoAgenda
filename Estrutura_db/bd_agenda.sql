@@ -108,6 +108,13 @@ create trigger trlogCategoria
      end;
      $$
 
-     update tb_categoria
-	set nome_categoria = "fornecedoreas" 
-    where  
+
+create table tb_contato(
+cod int auto_increment primary KEY,
+nome_contato varchar (60) not null,
+numero varchar (18) not null,
+categoria varchar (60) not null
+
+
+);
+);

@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_agenda));
             groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             button3 = new Button();
             button2 = new Button();
             cadastrar = new Button();
-            CampoCategoria = new TextBox();
+            Campo_categoria = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            campo_numero = new TextBox();
             label1 = new Label();
             campo_contato = new TextBox();
-            dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -50,10 +50,10 @@
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(cadastrar);
-            groupBox1.Controls.Add(CampoCategoria);
+            groupBox1.Controls.Add(Campo_categoria);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(campo_numero);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(campo_contato);
             groupBox1.Location = new Point(12, 12);
@@ -63,6 +63,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(316, 50);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(491, 245);
+            dataGridView1.TabIndex = 11;
             // 
             // button3
             // 
@@ -81,6 +89,7 @@
             button2.TabIndex = 9;
             button2.Text = "alterar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // cadastrar
             // 
@@ -90,13 +99,14 @@
             cadastrar.TabIndex = 8;
             cadastrar.Text = "cadastrar";
             cadastrar.UseVisualStyleBackColor = true;
+            cadastrar.Click += cadastrar_Click;
             // 
-            // CampoCategoria
+            // Campo_categoria
             // 
-            CampoCategoria.Location = new Point(0, 241);
-            CampoCategoria.Name = "CampoCategoria";
-            CampoCategoria.Size = new Size(243, 23);
-            CampoCategoria.TabIndex = 7;
+            Campo_categoria.Location = new Point(0, 241);
+            Campo_categoria.Name = "Campo_categoria";
+            Campo_categoria.Size = new Size(243, 23);
+            Campo_categoria.TabIndex = 7;
             // 
             // label3
             // 
@@ -118,12 +128,12 @@
             label2.TabIndex = 5;
             label2.Text = "telefone ";
             // 
-            // textBox1
+            // campo_numero
             // 
-            textBox1.Location = new Point(0, 149);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(243, 23);
-            textBox1.TabIndex = 4;
+            campo_numero.Location = new Point(0, 149);
+            campo_numero.Name = "campo_numero";
+            campo_numero.Size = new Size(243, 23);
+            campo_numero.TabIndex = 4;
             // 
             // label1
             // 
@@ -142,14 +152,6 @@
             campo_contato.Name = "campo_contato";
             campo_contato.Size = new Size(243, 23);
             campo_contato.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(316, 50);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(491, 245);
-            dataGridView1.TabIndex = 11;
             // 
             // Frm_agenda
             // 
@@ -173,11 +175,11 @@
         private Label label1;
         private TextBox campo_contato;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox campo_numero;
         private Button button3;
         private Button button2;
         private Button cadastrar;
-        private TextBox CampoCategoria;
+        private TextBox Campo_categoria;
         private Label label3;
         private DataGridView dataGridView1;
     }

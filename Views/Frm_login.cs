@@ -3,9 +3,9 @@ using ProjetoAgenda.Controller;
 
 namespace projetoAgenda
 {
-    public partial class Form1 : Form
+    public partial class Frm_login : Form
     {
-        public Form1()
+        public Frm_login()
         {
             InitializeComponent();
         }

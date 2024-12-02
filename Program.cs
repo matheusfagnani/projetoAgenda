@@ -17,7 +17,7 @@ namespace projetoAgenda
             ApplicationConfiguration.Initialize();
             //Application.Run(new Frm_teste());
             //
-            Application.Run(new Form1());
+            Application.Run(new Frm_login());
             //Application.Run(new Frm_tela_principal());
         }
     }
