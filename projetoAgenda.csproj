@@ -6,12 +6,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>imagens\download.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="categoria\**" />
     <EmbeddedResource Remove="categoria\**" />
     <None Remove="categoria\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="imagens\download.ico" />
   </ItemGroup>
 
   <ItemGroup>
